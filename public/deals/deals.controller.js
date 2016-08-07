@@ -6,7 +6,6 @@ deals.$inject = ['$http', 'Deals'];
 
 function deals($http, Deals) {
  var vm = this;
-
  var response = Deals.get();
 
  response.then(function(response) {
@@ -19,7 +18,6 @@ function deals($http, Deals) {
      group.score = i * 10;
      groups.push(group);
    }
-
    data.forEach(function(item) {
      var score = Math.ceil(item.metacriticScore / 10) * 10;
      groups.forEach(function(group) {
@@ -28,7 +26,6 @@ function deals($http, Deals) {
        }
      });
    });
-
    vm.groups = groups;
  });
 }
