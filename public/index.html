@@ -16,7 +16,6 @@
       </div>
       <div class="row" ng-controller="dealsController as deals">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-
           <div ng-repeat="group in deals.groups | orderBy: '-score'">
             <div class="panel panel-default text-center" ng-show="group.titles.length != 0">
               <div class="panel-heading">
