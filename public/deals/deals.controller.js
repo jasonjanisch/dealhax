@@ -6,12 +6,10 @@ deals.$inject = ['$http', 'Deals'];
 
 function deals($http, Deals) {
  var vm = this;
- var response = Deals.get();
-
+ var response = Deals.get(); // Retrieves deal objects from CheapShark API.
  response.then(function(response) {
    var data = response.data;
    var groups = [];
-
    for (var i = 0; i < 10; i++) {
      var group = {};
      group.titles = [];
